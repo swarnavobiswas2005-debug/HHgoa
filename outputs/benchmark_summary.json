@@ -1,0 +1,1672 @@
+[
+  {
+    "case_id": "CASE-BENCH-1001",
+    "trigger": "Benchmark Scenario #1: High velocity transfer & device anomaly",
+    "customer_id": "CUS-1002",
+    "account_id": "ACC-8801",
+    "transaction_id": "TX-BENCH-1001",
+    "status": "PENDING_APPROVAL",
+    "risk_level": "CRITICAL",
+    "confidence": 0.89,
+    "fraud_pattern": "Shared Device Ring",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1001-01",
+        "type": "SharedDevice",
+        "source": "TigerGraph GSQL Traversal",
+        "entity_id": "DVC-9082",
+        "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
+        "relevance": 0.95,
+        "confidence": 0.9,
+        "timestamp": "2026-09-24T08:32:48.940572Z",
+        "case_id": "CASE-BENCH-1001",
+        "metadata": null
+      },
+      {
+        "evidence_id": "EV-CASE-BENCH-1001-02",
+        "type": "TransactionVelocity",
+        "source": "Behavioral Analytics",
+        "entity_id": "CUS-1002",
+        "finding": "High transaction velocity: $6,250.00 transfer exceeding 3x cardholder daily threshold.",
+        "relevance": 0.85,
+        "confidence": 0.88,
+        "timestamp": "2026-09-24T08:32:48.940572Z",
+        "case_id": "CASE-BENCH-1001",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-101 evaluated approval requirements."
+    ],
+    "uncertainty": "High risk detected via shared device cluster, but customer ownership has not been independently verified via out-of-band SMS authentication.",
+    "requested_evidence": [
+      "Customer Out-Of-Band SMS Validation"
+    ],
+    "actions": [
+      {
+        "action": "BLOCK_ACCOUNT",
+        "reason": "Recommended BLOCK_ACCOUNT based on Policy POL-101 due to CRITICAL risk score.",
+        "confidence": 0.89,
+        "risk_level": "CRITICAL",
+        "required_approval": true,
+        "approval_role": "Fraud Analyst",
+        "policy_basis": "POL-101",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "RECOMMENDED"
+      }
+    ],
+    "approval_status": "PENDING_APPROVAL",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1001",
+        "timestamp": "2026-09-24T08:32:48.940551Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #1: High velocity transfer & device anomaly",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1001",
+        "timestamp": "2026-09-24T08:32:48.940551Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1001",
+        "timestamp": "2026-09-24T08:32:48.940551Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:48.940551Z",
+    "updated_at": "2026-09-24T08:32:48.940551Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1002",
+    "trigger": "Benchmark Scenario #2: High velocity transfer & device anomaly",
+    "customer_id": "CUS-1001",
+    "account_id": "ACC-8802",
+    "transaction_id": "TX-BENCH-1002",
+    "status": "PENDING_APPROVAL",
+    "risk_level": "CRITICAL",
+    "confidence": 0.89,
+    "fraud_pattern": "Shared Device Ring",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1002-01",
+        "type": "SharedDevice",
+        "source": "TigerGraph GSQL Traversal",
+        "entity_id": "DVC-9082",
+        "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
+        "relevance": 0.95,
+        "confidence": 0.9,
+        "timestamp": "2026-09-24T08:32:48.951448Z",
+        "case_id": "CASE-BENCH-1002",
+        "metadata": null
+      },
+      {
+        "evidence_id": "EV-CASE-BENCH-1002-02",
+        "type": "TransactionVelocity",
+        "source": "Behavioral Analytics",
+        "entity_id": "CUS-1001",
+        "finding": "High transaction velocity: $7,000.00 transfer exceeding 3x cardholder daily threshold.",
+        "relevance": 0.85,
+        "confidence": 0.88,
+        "timestamp": "2026-09-24T08:32:48.951448Z",
+        "case_id": "CASE-BENCH-1002",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-101 evaluated approval requirements."
+    ],
+    "uncertainty": "High risk detected via shared device cluster, but customer ownership has not been independently verified via out-of-band SMS authentication.",
+    "requested_evidence": [
+      "Customer Out-Of-Band SMS Validation"
+    ],
+    "actions": [
+      {
+        "action": "BLOCK_ACCOUNT",
+        "reason": "Recommended BLOCK_ACCOUNT based on Policy POL-101 due to CRITICAL risk score.",
+        "confidence": 0.89,
+        "risk_level": "CRITICAL",
+        "required_approval": true,
+        "approval_role": "Fraud Analyst",
+        "policy_basis": "POL-101",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "RECOMMENDED"
+      }
+    ],
+    "approval_status": "PENDING_APPROVAL",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1002",
+        "timestamp": "2026-09-24T08:32:48.951425Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #2: High velocity transfer & device anomaly",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1002",
+        "timestamp": "2026-09-24T08:32:48.951425Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1002",
+        "timestamp": "2026-09-24T08:32:48.951425Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:48.951425Z",
+    "updated_at": "2026-09-24T08:32:48.951425Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1003",
+    "trigger": "Benchmark Scenario #3: Location discrepancy behind VPN proxy",
+    "customer_id": "CUS-1003",
+    "account_id": "ACC-8803",
+    "transaction_id": "TX-BENCH-1003",
+    "status": "WAITING_FOR_EVIDENCE",
+    "risk_level": "MEDIUM",
+    "confidence": 0.72,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1003-02",
+        "type": "ProxyLocation",
+        "source": "Network Geolocation Service",
+        "entity_id": "IP-192.168.1.50",
+        "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
+        "relevance": 0.65,
+        "confidence": 0.72,
+        "timestamp": "2026-09-24T08:32:48.961394Z",
+        "case_id": "CASE-BENCH-1003",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-104 evaluated approval requirements."
+    ],
+    "uncertainty": "Transaction velocity anomaly detected behind proxy IP; additional device biometric confirmation recommended.",
+    "requested_evidence": [
+      "Device Biometric Confirmation"
+    ],
+    "actions": [
+      {
+        "action": "REQUEST_STEP_UP",
+        "reason": "Recommended REQUEST_STEP_UP based on Policy POL-104 due to MEDIUM risk score.",
+        "confidence": 0.72,
+        "risk_level": "MEDIUM",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-104",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1003",
+        "timestamp": "2026-09-24T08:32:48.961382Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #3: Location discrepancy behind VPN proxy",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1003",
+        "timestamp": "2026-09-24T08:32:48.961382Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1003",
+        "timestamp": "2026-09-24T08:32:48.961382Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-104 (Ambiguous Step-Up Resolution Policy) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:48.961382Z",
+    "updated_at": "2026-09-24T08:32:48.961382Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1004",
+    "trigger": "Benchmark Scenario #4: POS merchant purchase baseline check",
+    "customer_id": "CUS-1004",
+    "account_id": "ACC-8804",
+    "transaction_id": "TX-BENCH-1004",
+    "status": "RESOLVED",
+    "risk_level": "LOW",
+    "confidence": 0.95,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1004-02",
+        "type": "CardholderBaseline",
+        "source": "Point-of-Sale Machine Learning Model",
+        "entity_id": "CUS-1004",
+        "finding": "Verified POS purchase ($225.00) matching historical cardholder spending baseline.",
+        "relevance": 0.2,
+        "confidence": 0.95,
+        "timestamp": "2026-09-24T08:32:48.970223Z",
+        "case_id": "CASE-BENCH-1004",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-105 evaluated approval requirements."
+    ],
+    "uncertainty": "Evidence is consistent with normal customer spending behavior. No significant ambiguity.",
+    "requested_evidence": [],
+    "actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "reason": "Recommended ALLOW_TRANSACTION based on Policy POL-105 due to LOW risk score.",
+        "confidence": 0.95,
+        "risk_level": "LOW",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-105",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1004",
+        "timestamp": "2026-09-24T08:32:48.970208Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #4: POS merchant purchase baseline check",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1004",
+        "timestamp": "2026-09-24T08:32:48.970208Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1004",
+        "timestamp": "2026-09-24T08:32:48.970208Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-105 (Low Risk Autonomous Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:48.970208Z",
+    "updated_at": "2026-09-24T08:32:48.970208Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1005",
+    "trigger": "Benchmark Scenario #5: High velocity transfer & device anomaly",
+    "customer_id": "CUS-1002",
+    "account_id": "ACC-8805",
+    "transaction_id": "TX-BENCH-1005",
+    "status": "PENDING_APPROVAL",
+    "risk_level": "CRITICAL",
+    "confidence": 0.89,
+    "fraud_pattern": "Shared Device Ring",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1005-01",
+        "type": "SharedDevice",
+        "source": "TigerGraph GSQL Traversal",
+        "entity_id": "DVC-9082",
+        "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
+        "relevance": 0.95,
+        "confidence": 0.9,
+        "timestamp": "2026-09-24T08:32:48.978979Z",
+        "case_id": "CASE-BENCH-1005",
+        "metadata": null
+      },
+      {
+        "evidence_id": "EV-CASE-BENCH-1005-02",
+        "type": "TransactionVelocity",
+        "source": "Behavioral Analytics",
+        "entity_id": "CUS-1002",
+        "finding": "High transaction velocity: $9,250.00 transfer exceeding 3x cardholder daily threshold.",
+        "relevance": 0.85,
+        "confidence": 0.88,
+        "timestamp": "2026-09-24T08:32:48.978979Z",
+        "case_id": "CASE-BENCH-1005",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-101 evaluated approval requirements."
+    ],
+    "uncertainty": "High risk detected via shared device cluster, but customer ownership has not been independently verified via out-of-band SMS authentication.",
+    "requested_evidence": [
+      "Customer Out-Of-Band SMS Validation"
+    ],
+    "actions": [
+      {
+        "action": "BLOCK_ACCOUNT",
+        "reason": "Recommended BLOCK_ACCOUNT based on Policy POL-101 due to CRITICAL risk score.",
+        "confidence": 0.89,
+        "risk_level": "CRITICAL",
+        "required_approval": true,
+        "approval_role": "Fraud Analyst",
+        "policy_basis": "POL-101",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "RECOMMENDED"
+      }
+    ],
+    "approval_status": "PENDING_APPROVAL",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1005",
+        "timestamp": "2026-09-24T08:32:48.978959Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #5: High velocity transfer & device anomaly",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1005",
+        "timestamp": "2026-09-24T08:32:48.978959Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1005",
+        "timestamp": "2026-09-24T08:32:48.978959Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:48.978959Z",
+    "updated_at": "2026-09-24T08:32:48.978959Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1006",
+    "trigger": "Benchmark Scenario #6: Location discrepancy behind VPN proxy",
+    "customer_id": "CUS-1006",
+    "account_id": "ACC-8806",
+    "transaction_id": "TX-BENCH-1006",
+    "status": "WAITING_FOR_EVIDENCE",
+    "risk_level": "MEDIUM",
+    "confidence": 0.72,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1006-02",
+        "type": "ProxyLocation",
+        "source": "Network Geolocation Service",
+        "entity_id": "IP-192.168.1.50",
+        "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
+        "relevance": 0.65,
+        "confidence": 0.72,
+        "timestamp": "2026-09-24T08:32:48.986220Z",
+        "case_id": "CASE-BENCH-1006",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-104 evaluated approval requirements."
+    ],
+    "uncertainty": "Transaction velocity anomaly detected behind proxy IP; additional device biometric confirmation recommended.",
+    "requested_evidence": [
+      "Device Biometric Confirmation"
+    ],
+    "actions": [
+      {
+        "action": "REQUEST_STEP_UP",
+        "reason": "Recommended REQUEST_STEP_UP based on Policy POL-104 due to MEDIUM risk score.",
+        "confidence": 0.72,
+        "risk_level": "MEDIUM",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-104",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1006",
+        "timestamp": "2026-09-24T08:32:48.986208Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #6: Location discrepancy behind VPN proxy",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1006",
+        "timestamp": "2026-09-24T08:32:48.986208Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1006",
+        "timestamp": "2026-09-24T08:32:48.986208Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-104 (Ambiguous Step-Up Resolution Policy) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:48.986208Z",
+    "updated_at": "2026-09-24T08:32:48.986208Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1007",
+    "trigger": "Benchmark Scenario #7: POS merchant purchase baseline check",
+    "customer_id": "CUS-1007",
+    "account_id": "ACC-8807",
+    "transaction_id": "TX-BENCH-1007",
+    "status": "RESOLVED",
+    "risk_level": "LOW",
+    "confidence": 0.95,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1007-02",
+        "type": "CardholderBaseline",
+        "source": "Point-of-Sale Machine Learning Model",
+        "entity_id": "CUS-1007",
+        "finding": "Verified POS purchase ($330.00) matching historical cardholder spending baseline.",
+        "relevance": 0.2,
+        "confidence": 0.95,
+        "timestamp": "2026-09-24T08:32:48.995400Z",
+        "case_id": "CASE-BENCH-1007",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-105 evaluated approval requirements."
+    ],
+    "uncertainty": "Evidence is consistent with normal customer spending behavior. No significant ambiguity.",
+    "requested_evidence": [],
+    "actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "reason": "Recommended ALLOW_TRANSACTION based on Policy POL-105 due to LOW risk score.",
+        "confidence": 0.95,
+        "risk_level": "LOW",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-105",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1007",
+        "timestamp": "2026-09-24T08:32:48.995386Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #7: POS merchant purchase baseline check",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1007",
+        "timestamp": "2026-09-24T08:32:48.995386Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1007",
+        "timestamp": "2026-09-24T08:32:48.995386Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-105 (Low Risk Autonomous Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:48.995386Z",
+    "updated_at": "2026-09-24T08:32:48.995386Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1008",
+    "trigger": "Benchmark Scenario #8: Location discrepancy behind VPN proxy",
+    "customer_id": "CUS-1008",
+    "account_id": "ACC-8808",
+    "transaction_id": "TX-BENCH-1008",
+    "status": "WAITING_FOR_EVIDENCE",
+    "risk_level": "MEDIUM",
+    "confidence": 0.72,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1008-02",
+        "type": "ProxyLocation",
+        "source": "Network Geolocation Service",
+        "entity_id": "IP-192.168.1.50",
+        "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
+        "relevance": 0.65,
+        "confidence": 0.72,
+        "timestamp": "2026-09-24T08:32:49.004190Z",
+        "case_id": "CASE-BENCH-1008",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Transaction velocity anomaly detected behind proxy IP; additional device biometric confirmation recommended.",
+    "requested_evidence": [
+      "Device Biometric Confirmation"
+    ],
+    "actions": [
+      {
+        "action": "REQUEST_STEP_UP",
+        "reason": "Recommended REQUEST_STEP_UP based on Policy POL-102 due to MEDIUM risk score.",
+        "confidence": 0.72,
+        "risk_level": "MEDIUM",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1008",
+        "timestamp": "2026-09-24T08:32:49.004178Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #8: Location discrepancy behind VPN proxy",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1008",
+        "timestamp": "2026-09-24T08:32:49.004178Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1008",
+        "timestamp": "2026-09-24T08:32:49.004178Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.004178Z",
+    "updated_at": "2026-09-24T08:32:49.004178Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1009",
+    "trigger": "Benchmark Scenario #9: High velocity transfer & device anomaly",
+    "customer_id": "CUS-1002",
+    "account_id": "ACC-8809",
+    "transaction_id": "TX-BENCH-1009",
+    "status": "PENDING_APPROVAL",
+    "risk_level": "CRITICAL",
+    "confidence": 0.89,
+    "fraud_pattern": "Shared Device Ring",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1009-01",
+        "type": "SharedDevice",
+        "source": "TigerGraph GSQL Traversal",
+        "entity_id": "DVC-9082",
+        "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
+        "relevance": 0.95,
+        "confidence": 0.9,
+        "timestamp": "2026-09-24T08:32:49.013262Z",
+        "case_id": "CASE-BENCH-1009",
+        "metadata": null
+      },
+      {
+        "evidence_id": "EV-CASE-BENCH-1009-02",
+        "type": "TransactionVelocity",
+        "source": "Behavioral Analytics",
+        "entity_id": "CUS-1002",
+        "finding": "High transaction velocity: $12,250.00 transfer exceeding 3x cardholder daily threshold.",
+        "relevance": 0.85,
+        "confidence": 0.88,
+        "timestamp": "2026-09-24T08:32:49.013262Z",
+        "case_id": "CASE-BENCH-1009",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-101 evaluated approval requirements."
+    ],
+    "uncertainty": "High risk detected via shared device cluster, but customer ownership has not been independently verified via out-of-band SMS authentication.",
+    "requested_evidence": [
+      "Customer Out-Of-Band SMS Validation"
+    ],
+    "actions": [
+      {
+        "action": "BLOCK_ACCOUNT",
+        "reason": "Recommended BLOCK_ACCOUNT based on Policy POL-101 due to CRITICAL risk score.",
+        "confidence": 0.89,
+        "risk_level": "CRITICAL",
+        "required_approval": true,
+        "approval_role": "Fraud Analyst",
+        "policy_basis": "POL-101",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "RECOMMENDED"
+      }
+    ],
+    "approval_status": "PENDING_APPROVAL",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1009",
+        "timestamp": "2026-09-24T08:32:49.013241Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #9: High velocity transfer & device anomaly",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1009",
+        "timestamp": "2026-09-24T08:32:49.013241Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1009",
+        "timestamp": "2026-09-24T08:32:49.013241Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.013241Z",
+    "updated_at": "2026-09-24T08:32:49.013241Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1010",
+    "trigger": "Benchmark Scenario #10: POS merchant purchase baseline check",
+    "customer_id": "CUS-1010",
+    "account_id": "ACC-8810",
+    "transaction_id": "TX-BENCH-1010",
+    "status": "RESOLVED",
+    "risk_level": "LOW",
+    "confidence": 0.95,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1010-02",
+        "type": "CardholderBaseline",
+        "source": "Point-of-Sale Machine Learning Model",
+        "entity_id": "CUS-1010",
+        "finding": "Verified POS purchase ($435.00) matching historical cardholder spending baseline.",
+        "relevance": 0.2,
+        "confidence": 0.95,
+        "timestamp": "2026-09-24T08:32:49.022384Z",
+        "case_id": "CASE-BENCH-1010",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-105 evaluated approval requirements."
+    ],
+    "uncertainty": "Evidence is consistent with normal customer spending behavior. No significant ambiguity.",
+    "requested_evidence": [],
+    "actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "reason": "Recommended ALLOW_TRANSACTION based on Policy POL-105 due to LOW risk score.",
+        "confidence": 0.95,
+        "risk_level": "LOW",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-105",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1010",
+        "timestamp": "2026-09-24T08:32:49.022371Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #10: POS merchant purchase baseline check",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1010",
+        "timestamp": "2026-09-24T08:32:49.022371Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1010",
+        "timestamp": "2026-09-24T08:32:49.022371Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-105 (Low Risk Autonomous Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.022371Z",
+    "updated_at": "2026-09-24T08:32:49.022371Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1011",
+    "trigger": "Benchmark Scenario #11: Location discrepancy behind VPN proxy",
+    "customer_id": "CUS-1011",
+    "account_id": "ACC-8811",
+    "transaction_id": "TX-BENCH-1011",
+    "status": "WAITING_FOR_EVIDENCE",
+    "risk_level": "MEDIUM",
+    "confidence": 0.72,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1011-02",
+        "type": "ProxyLocation",
+        "source": "Network Geolocation Service",
+        "entity_id": "IP-192.168.1.50",
+        "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
+        "relevance": 0.65,
+        "confidence": 0.72,
+        "timestamp": "2026-09-24T08:32:49.031879Z",
+        "case_id": "CASE-BENCH-1011",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Transaction velocity anomaly detected behind proxy IP; additional device biometric confirmation recommended.",
+    "requested_evidence": [
+      "Device Biometric Confirmation"
+    ],
+    "actions": [
+      {
+        "action": "REQUEST_STEP_UP",
+        "reason": "Recommended REQUEST_STEP_UP based on Policy POL-102 due to MEDIUM risk score.",
+        "confidence": 0.72,
+        "risk_level": "MEDIUM",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1011",
+        "timestamp": "2026-09-24T08:32:49.031863Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #11: Location discrepancy behind VPN proxy",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1011",
+        "timestamp": "2026-09-24T08:32:49.031863Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1011",
+        "timestamp": "2026-09-24T08:32:49.031863Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.031863Z",
+    "updated_at": "2026-09-24T08:32:49.031863Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1012",
+    "trigger": "Benchmark Scenario #12: POS merchant purchase baseline check",
+    "customer_id": "CUS-1012",
+    "account_id": "ACC-8812",
+    "transaction_id": "TX-BENCH-1012",
+    "status": "RESOLVED",
+    "risk_level": "LOW",
+    "confidence": 0.95,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1012-02",
+        "type": "CardholderBaseline",
+        "source": "Point-of-Sale Machine Learning Model",
+        "entity_id": "CUS-1012",
+        "finding": "Verified POS purchase ($505.00) matching historical cardholder spending baseline.",
+        "relevance": 0.2,
+        "confidence": 0.95,
+        "timestamp": "2026-09-24T08:32:49.040723Z",
+        "case_id": "CASE-BENCH-1012",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Evidence is consistent with normal customer spending behavior. No significant ambiguity.",
+    "requested_evidence": [],
+    "actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "reason": "Recommended ALLOW_TRANSACTION based on Policy POL-102 due to LOW risk score.",
+        "confidence": 0.95,
+        "risk_level": "LOW",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1012",
+        "timestamp": "2026-09-24T08:32:49.040709Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #12: POS merchant purchase baseline check",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1012",
+        "timestamp": "2026-09-24T08:32:49.040709Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1012",
+        "timestamp": "2026-09-24T08:32:49.040709Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.040709Z",
+    "updated_at": "2026-09-24T08:32:49.040709Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1013",
+    "trigger": "Benchmark Scenario #13: POS merchant purchase baseline check",
+    "customer_id": "CUS-1013",
+    "account_id": "ACC-8813",
+    "transaction_id": "TX-BENCH-1013",
+    "status": "RESOLVED",
+    "risk_level": "LOW",
+    "confidence": 0.95,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1013-02",
+        "type": "CardholderBaseline",
+        "source": "Point-of-Sale Machine Learning Model",
+        "entity_id": "CUS-1013",
+        "finding": "Verified POS purchase ($540.00) matching historical cardholder spending baseline.",
+        "relevance": 0.2,
+        "confidence": 0.95,
+        "timestamp": "2026-09-24T08:32:49.050400Z",
+        "case_id": "CASE-BENCH-1013",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Evidence is consistent with normal customer spending behavior. No significant ambiguity.",
+    "requested_evidence": [],
+    "actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "reason": "Recommended ALLOW_TRANSACTION based on Policy POL-102 due to LOW risk score.",
+        "confidence": 0.95,
+        "risk_level": "LOW",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1013",
+        "timestamp": "2026-09-24T08:32:49.050383Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #13: POS merchant purchase baseline check",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1013",
+        "timestamp": "2026-09-24T08:32:49.050383Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1013",
+        "timestamp": "2026-09-24T08:32:49.050383Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.050383Z",
+    "updated_at": "2026-09-24T08:32:49.050383Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1014",
+    "trigger": "Benchmark Scenario #14: High velocity transfer & device anomaly",
+    "customer_id": "CUS-1001",
+    "account_id": "ACC-8814",
+    "transaction_id": "TX-BENCH-1014",
+    "status": "PENDING_APPROVAL",
+    "risk_level": "CRITICAL",
+    "confidence": 0.89,
+    "fraud_pattern": "Shared Device Ring",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1014-01",
+        "type": "SharedDevice",
+        "source": "TigerGraph GSQL Traversal",
+        "entity_id": "DVC-9082",
+        "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
+        "relevance": 0.95,
+        "confidence": 0.9,
+        "timestamp": "2026-09-24T08:32:49.058195Z",
+        "case_id": "CASE-BENCH-1014",
+        "metadata": null
+      },
+      {
+        "evidence_id": "EV-CASE-BENCH-1014-02",
+        "type": "TransactionVelocity",
+        "source": "Behavioral Analytics",
+        "entity_id": "CUS-1001",
+        "finding": "High transaction velocity: $16,000.00 transfer exceeding 3x cardholder daily threshold.",
+        "relevance": 0.85,
+        "confidence": 0.88,
+        "timestamp": "2026-09-24T08:32:49.058195Z",
+        "case_id": "CASE-BENCH-1014",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-101 evaluated approval requirements."
+    ],
+    "uncertainty": "High risk detected via shared device cluster, but customer ownership has not been independently verified via out-of-band SMS authentication.",
+    "requested_evidence": [
+      "Customer Out-Of-Band SMS Validation"
+    ],
+    "actions": [
+      {
+        "action": "BLOCK_ACCOUNT",
+        "reason": "Recommended BLOCK_ACCOUNT based on Policy POL-101 due to CRITICAL risk score.",
+        "confidence": 0.89,
+        "risk_level": "CRITICAL",
+        "required_approval": true,
+        "approval_role": "Fraud Analyst",
+        "policy_basis": "POL-101",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "RECOMMENDED"
+      }
+    ],
+    "approval_status": "PENDING_APPROVAL",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1014",
+        "timestamp": "2026-09-24T08:32:49.058180Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #14: High velocity transfer & device anomaly",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1014",
+        "timestamp": "2026-09-24T08:32:49.058180Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1014",
+        "timestamp": "2026-09-24T08:32:49.058180Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.058180Z",
+    "updated_at": "2026-09-24T08:32:49.058180Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1015",
+    "trigger": "Benchmark Scenario #15: Location discrepancy behind VPN proxy",
+    "customer_id": "CUS-1015",
+    "account_id": "ACC-8815",
+    "transaction_id": "TX-BENCH-1015",
+    "status": "WAITING_FOR_EVIDENCE",
+    "risk_level": "MEDIUM",
+    "confidence": 0.72,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1015-02",
+        "type": "ProxyLocation",
+        "source": "Network Geolocation Service",
+        "entity_id": "IP-192.168.1.50",
+        "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
+        "relevance": 0.65,
+        "confidence": 0.72,
+        "timestamp": "2026-09-24T08:32:49.066769Z",
+        "case_id": "CASE-BENCH-1015",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Transaction velocity anomaly detected behind proxy IP; additional device biometric confirmation recommended.",
+    "requested_evidence": [
+      "Device Biometric Confirmation"
+    ],
+    "actions": [
+      {
+        "action": "REQUEST_STEP_UP",
+        "reason": "Recommended REQUEST_STEP_UP based on Policy POL-102 due to MEDIUM risk score.",
+        "confidence": 0.72,
+        "risk_level": "MEDIUM",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1015",
+        "timestamp": "2026-09-24T08:32:49.066747Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #15: Location discrepancy behind VPN proxy",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1015",
+        "timestamp": "2026-09-24T08:32:49.066747Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1015",
+        "timestamp": "2026-09-24T08:32:49.066747Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.066747Z",
+    "updated_at": "2026-09-24T08:32:49.066747Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1016",
+    "trigger": "Benchmark Scenario #16: POS merchant purchase baseline check",
+    "customer_id": "CUS-1016",
+    "account_id": "ACC-8816",
+    "transaction_id": "TX-BENCH-1016",
+    "status": "RESOLVED",
+    "risk_level": "LOW",
+    "confidence": 0.95,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1016-02",
+        "type": "CardholderBaseline",
+        "source": "Point-of-Sale Machine Learning Model",
+        "entity_id": "CUS-1016",
+        "finding": "Verified POS purchase ($645.00) matching historical cardholder spending baseline.",
+        "relevance": 0.2,
+        "confidence": 0.95,
+        "timestamp": "2026-09-24T08:32:49.076194Z",
+        "case_id": "CASE-BENCH-1016",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Evidence is consistent with normal customer spending behavior. No significant ambiguity.",
+    "requested_evidence": [],
+    "actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "reason": "Recommended ALLOW_TRANSACTION based on Policy POL-102 due to LOW risk score.",
+        "confidence": 0.95,
+        "risk_level": "LOW",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1016",
+        "timestamp": "2026-09-24T08:32:49.076180Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #16: POS merchant purchase baseline check",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1016",
+        "timestamp": "2026-09-24T08:32:49.076180Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1016",
+        "timestamp": "2026-09-24T08:32:49.076180Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.076180Z",
+    "updated_at": "2026-09-24T08:32:49.076180Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1017",
+    "trigger": "Benchmark Scenario #17: POS merchant purchase baseline check",
+    "customer_id": "CUS-1017",
+    "account_id": "ACC-8817",
+    "transaction_id": "TX-BENCH-1017",
+    "status": "RESOLVED",
+    "risk_level": "LOW",
+    "confidence": 0.95,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1017-02",
+        "type": "CardholderBaseline",
+        "source": "Point-of-Sale Machine Learning Model",
+        "entity_id": "CUS-1017",
+        "finding": "Verified POS purchase ($680.00) matching historical cardholder spending baseline.",
+        "relevance": 0.2,
+        "confidence": 0.95,
+        "timestamp": "2026-09-24T08:32:49.085757Z",
+        "case_id": "CASE-BENCH-1017",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Evidence is consistent with normal customer spending behavior. No significant ambiguity.",
+    "requested_evidence": [],
+    "actions": [
+      {
+        "action": "ALLOW_TRANSACTION",
+        "reason": "Recommended ALLOW_TRANSACTION based on Policy POL-102 due to LOW risk score.",
+        "confidence": 0.95,
+        "risk_level": "LOW",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1017",
+        "timestamp": "2026-09-24T08:32:49.085743Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #17: POS merchant purchase baseline check",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1017",
+        "timestamp": "2026-09-24T08:32:49.085743Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1017",
+        "timestamp": "2026-09-24T08:32:49.085743Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.085743Z",
+    "updated_at": "2026-09-24T08:32:49.085743Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1018",
+    "trigger": "Benchmark Scenario #18: High velocity transfer & device anomaly",
+    "customer_id": "CUS-1001",
+    "account_id": "ACC-8818",
+    "transaction_id": "TX-BENCH-1018",
+    "status": "PENDING_APPROVAL",
+    "risk_level": "CRITICAL",
+    "confidence": 0.89,
+    "fraud_pattern": "Shared Device Ring",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1018-01",
+        "type": "SharedDevice",
+        "source": "TigerGraph GSQL Traversal",
+        "entity_id": "DVC-9082",
+        "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
+        "relevance": 0.95,
+        "confidence": 0.9,
+        "timestamp": "2026-09-24T08:32:49.095527Z",
+        "case_id": "CASE-BENCH-1018",
+        "metadata": null
+      },
+      {
+        "evidence_id": "EV-CASE-BENCH-1018-02",
+        "type": "TransactionVelocity",
+        "source": "Behavioral Analytics",
+        "entity_id": "CUS-1001",
+        "finding": "High transaction velocity: $19,000.00 transfer exceeding 3x cardholder daily threshold.",
+        "relevance": 0.85,
+        "confidence": 0.88,
+        "timestamp": "2026-09-24T08:32:49.095527Z",
+        "case_id": "CASE-BENCH-1018",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-101 evaluated approval requirements."
+    ],
+    "uncertainty": "High risk detected via shared device cluster, but customer ownership has not been independently verified via out-of-band SMS authentication.",
+    "requested_evidence": [
+      "Customer Out-Of-Band SMS Validation"
+    ],
+    "actions": [
+      {
+        "action": "BLOCK_ACCOUNT",
+        "reason": "Recommended BLOCK_ACCOUNT based on Policy POL-101 due to CRITICAL risk score.",
+        "confidence": 0.89,
+        "risk_level": "CRITICAL",
+        "required_approval": true,
+        "approval_role": "Fraud Analyst",
+        "policy_basis": "POL-101",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "RECOMMENDED"
+      }
+    ],
+    "approval_status": "PENDING_APPROVAL",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1018",
+        "timestamp": "2026-09-24T08:32:49.095505Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #18: High velocity transfer & device anomaly",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1018",
+        "timestamp": "2026-09-24T08:32:49.095505Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1018",
+        "timestamp": "2026-09-24T08:32:49.095505Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.095505Z",
+    "updated_at": "2026-09-24T08:32:49.095505Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1019",
+    "trigger": "Benchmark Scenario #19: Location discrepancy behind VPN proxy",
+    "customer_id": "CUS-1019",
+    "account_id": "ACC-8819",
+    "transaction_id": "TX-BENCH-1019",
+    "status": "WAITING_FOR_EVIDENCE",
+    "risk_level": "MEDIUM",
+    "confidence": 0.72,
+    "fraud_pattern": "Transaction Velocity Anomaly",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1019-02",
+        "type": "ProxyLocation",
+        "source": "Network Geolocation Service",
+        "entity_id": "IP-192.168.1.50",
+        "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
+        "relevance": 0.65,
+        "confidence": 0.72,
+        "timestamp": "2026-09-24T08:32:49.106634Z",
+        "case_id": "CASE-BENCH-1019",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-102 evaluated approval requirements."
+    ],
+    "uncertainty": "Transaction velocity anomaly detected behind proxy IP; additional device biometric confirmation recommended.",
+    "requested_evidence": [
+      "Device Biometric Confirmation"
+    ],
+    "actions": [
+      {
+        "action": "REQUEST_STEP_UP",
+        "reason": "Recommended REQUEST_STEP_UP based on Policy POL-102 due to MEDIUM risk score.",
+        "confidence": 0.72,
+        "risk_level": "MEDIUM",
+        "required_approval": false,
+        "approval_role": "System",
+        "policy_basis": "POL-102",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "AUTONOMOUS_PERMITTED"
+      }
+    ],
+    "approval_status": "NOT_REQUIRED",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1019",
+        "timestamp": "2026-09-24T08:32:49.106617Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #19: Location discrepancy behind VPN proxy",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1019",
+        "timestamp": "2026-09-24T08:32:49.106617Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1019",
+        "timestamp": "2026-09-24T08:32:49.106617Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.106617Z",
+    "updated_at": "2026-09-24T08:32:49.106617Z"
+  },
+  {
+    "case_id": "CASE-BENCH-1020",
+    "trigger": "Benchmark Scenario #20: High velocity transfer & device anomaly",
+    "customer_id": "CUS-1001",
+    "account_id": "ACC-8820",
+    "transaction_id": "TX-BENCH-1020",
+    "status": "PENDING_APPROVAL",
+    "risk_level": "CRITICAL",
+    "confidence": 0.89,
+    "fraud_pattern": "Shared Device Ring",
+    "evidence": [
+      {
+        "evidence_id": "EV-CASE-BENCH-1020-01",
+        "type": "SharedDevice",
+        "source": "TigerGraph GSQL Traversal",
+        "entity_id": "DVC-9082",
+        "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
+        "relevance": 0.95,
+        "confidence": 0.9,
+        "timestamp": "2026-09-24T08:32:49.117436Z",
+        "case_id": "CASE-BENCH-1020",
+        "metadata": null
+      },
+      {
+        "evidence_id": "EV-CASE-BENCH-1020-02",
+        "type": "TransactionVelocity",
+        "source": "Behavioral Analytics",
+        "entity_id": "CUS-1001",
+        "finding": "High transaction velocity: $20,500.00 transfer exceeding 3x cardholder daily threshold.",
+        "relevance": 0.85,
+        "confidence": 0.88,
+        "timestamp": "2026-09-24T08:32:49.117436Z",
+        "case_id": "CASE-BENCH-1020",
+        "metadata": null
+      }
+    ],
+    "findings": [
+      "Device DVC-9082 is shared across 2 customer accounts.",
+      "Policy POL-101 evaluated approval requirements."
+    ],
+    "uncertainty": "High risk detected via shared device cluster, but customer ownership has not been independently verified via out-of-band SMS authentication.",
+    "requested_evidence": [
+      "Customer Out-Of-Band SMS Validation"
+    ],
+    "actions": [
+      {
+        "action": "BLOCK_ACCOUNT",
+        "reason": "Recommended BLOCK_ACCOUNT based on Policy POL-101 due to CRITICAL risk score.",
+        "confidence": 0.89,
+        "risk_level": "CRITICAL",
+        "required_approval": true,
+        "approval_role": "Fraud Analyst",
+        "policy_basis": "POL-101",
+        "supporting_evidence": [
+          "Shared Device Ring Detected"
+        ],
+        "blocked_reasons": [],
+        "execution_status": "RECOMMENDED"
+      }
+    ],
+    "approval_status": "PENDING_APPROVAL",
+    "analyst_notes": null,
+    "timeline": [
+      {
+        "event_id": "EVT-01-CASE-BENCH-1020",
+        "timestamp": "2026-09-24T08:32:49.117410Z",
+        "event_type": "CASE_CREATED",
+        "summary": "Investigation triggered: Benchmark Scenario #20: High velocity transfer & device anomaly",
+        "actor": "System Orchestrator",
+        "details": null
+      },
+      {
+        "event_id": "EVT-02-CASE-BENCH-1020",
+        "timestamp": "2026-09-24T08:32:49.117410Z",
+        "event_type": "GRAPH_QUERY_EXECUTED",
+        "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
+        "actor": "Investigation Agent",
+        "details": null
+      },
+      {
+        "event_id": "EVT-03-CASE-BENCH-1020",
+        "timestamp": "2026-09-24T08:32:49.117410Z",
+        "event_type": "POLICY_EVALUATED",
+        "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
+        "actor": "Policy Agent",
+        "details": null
+      }
+    ],
+    "final_outcome": null,
+    "created_at": "2026-09-24T08:32:49.117410Z",
+    "updated_at": "2026-09-24T08:32:49.117410Z"
+  }
+]
