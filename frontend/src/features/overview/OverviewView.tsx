@@ -9,7 +9,6 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import type { FraudCase } from '../../types';
-import { Todos } from '../../components/Todos';
 
 interface OverviewViewProps {
   cases: FraudCase[];
@@ -227,9 +226,6 @@ export const OverviewView: React.FC<OverviewViewProps> = ({ cases, onSelectCase 
           </div>
         </div>
       </div>
-
-      {/* Supabase Integration Test */}
-      <Todos />
     </div>
   );
 };

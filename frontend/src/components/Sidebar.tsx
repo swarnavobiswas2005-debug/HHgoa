@@ -98,12 +98,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, setCurrentTab, dem
       <div className="p-3 border-t border-red-500/15 bg-[#050505]/80 space-y-2 text-xs text-[#A1A1AA]">
         <div className="flex items-center justify-between text-[10px] font-mono px-1">
           <span className="flex items-center gap-1.5 text-[#71717A]">
-            <Server className="w-3 h-3 text-emerald-400" /> SUPABASE DB
+            <Server className="w-3 h-3 text-red-400" /> SYSTEM STATUS
           </span>
-          <span className="text-emerald-500 font-bold flex items-center gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            CONNECTED
-          </span>
+          <span className="text-red-400 font-bold">OPERATIONAL</span>
         </div>
 
         <div className="flex items-center gap-2.5 pt-1 border-t border-white/5">
