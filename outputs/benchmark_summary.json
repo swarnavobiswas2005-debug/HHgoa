@@ -18,7 +18,7 @@
         "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
         "relevance": 0.95,
         "confidence": 0.9,
-        "timestamp": "2026-09-24T08:32:48.940572Z",
+        "timestamp": "2026-09-24T17:47:08.475896Z",
         "case_id": "CASE-BENCH-1001",
         "metadata": null
       },
@@ -30,7 +30,7 @@
         "finding": "High transaction velocity: $6,250.00 transfer exceeding 3x cardholder daily threshold.",
         "relevance": 0.85,
         "confidence": 0.88,
-        "timestamp": "2026-09-24T08:32:48.940572Z",
+        "timestamp": "2026-09-24T17:47:08.475896Z",
         "case_id": "CASE-BENCH-1001",
         "metadata": null
       }
@@ -64,7 +64,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1001",
-        "timestamp": "2026-09-24T08:32:48.940551Z",
+        "timestamp": "2026-09-24T17:47:08.475877Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #1: High velocity transfer & device anomaly",
         "actor": "System Orchestrator",
@@ -72,7 +72,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1001",
-        "timestamp": "2026-09-24T08:32:48.940551Z",
+        "timestamp": "2026-09-24T17:47:08.475877Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
         "actor": "Investigation Agent",
@@ -80,7 +80,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1001",
-        "timestamp": "2026-09-24T08:32:48.940551Z",
+        "timestamp": "2026-09-24T17:47:08.475877Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -88,8 +88,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:48.940551Z",
-    "updated_at": "2026-09-24T08:32:48.940551Z"
+    "created_at": "2026-09-24T17:47:08.475877Z",
+    "updated_at": "2026-09-24T17:47:08.475877Z"
   },
   {
     "case_id": "CASE-BENCH-1002",
@@ -110,7 +110,7 @@
         "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
         "relevance": 0.95,
         "confidence": 0.9,
-        "timestamp": "2026-09-24T08:32:48.951448Z",
+        "timestamp": "2026-09-24T17:47:09.028207Z",
         "case_id": "CASE-BENCH-1002",
         "metadata": null
       },
@@ -122,7 +122,7 @@
         "finding": "High transaction velocity: $7,000.00 transfer exceeding 3x cardholder daily threshold.",
         "relevance": 0.85,
         "confidence": 0.88,
-        "timestamp": "2026-09-24T08:32:48.951448Z",
+        "timestamp": "2026-09-24T17:47:09.028207Z",
         "case_id": "CASE-BENCH-1002",
         "metadata": null
       }
@@ -156,7 +156,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1002",
-        "timestamp": "2026-09-24T08:32:48.951425Z",
+        "timestamp": "2026-09-24T17:47:09.028186Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #2: High velocity transfer & device anomaly",
         "actor": "System Orchestrator",
@@ -164,7 +164,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1002",
-        "timestamp": "2026-09-24T08:32:48.951425Z",
+        "timestamp": "2026-09-24T17:47:09.028186Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
         "actor": "Investigation Agent",
@@ -172,7 +172,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1002",
-        "timestamp": "2026-09-24T08:32:48.951425Z",
+        "timestamp": "2026-09-24T17:47:09.028186Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -180,8 +180,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:48.951425Z",
-    "updated_at": "2026-09-24T08:32:48.951425Z"
+    "created_at": "2026-09-24T17:47:09.028186Z",
+    "updated_at": "2026-09-24T17:47:09.028186Z"
   },
   {
     "case_id": "CASE-BENCH-1003",
@@ -202,7 +202,7 @@
         "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
         "relevance": 0.65,
         "confidence": 0.72,
-        "timestamp": "2026-09-24T08:32:48.961394Z",
+        "timestamp": "2026-09-24T17:47:09.136148Z",
         "case_id": "CASE-BENCH-1003",
         "metadata": null
       }
@@ -236,7 +236,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1003",
-        "timestamp": "2026-09-24T08:32:48.961382Z",
+        "timestamp": "2026-09-24T17:47:09.136136Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #3: Location discrepancy behind VPN proxy",
         "actor": "System Orchestrator",
@@ -244,7 +244,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1003",
-        "timestamp": "2026-09-24T08:32:48.961382Z",
+        "timestamp": "2026-09-24T17:47:09.136136Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -252,7 +252,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1003",
-        "timestamp": "2026-09-24T08:32:48.961382Z",
+        "timestamp": "2026-09-24T17:47:09.136136Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-104 (Ambiguous Step-Up Resolution Policy) evaluated.",
         "actor": "Policy Agent",
@@ -260,8 +260,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:48.961382Z",
-    "updated_at": "2026-09-24T08:32:48.961382Z"
+    "created_at": "2026-09-24T17:47:09.136136Z",
+    "updated_at": "2026-09-24T17:47:09.136136Z"
   },
   {
     "case_id": "CASE-BENCH-1004",
@@ -282,7 +282,7 @@
         "finding": "Verified POS purchase ($225.00) matching historical cardholder spending baseline.",
         "relevance": 0.2,
         "confidence": 0.95,
-        "timestamp": "2026-09-24T08:32:48.970223Z",
+        "timestamp": "2026-09-24T17:47:09.251697Z",
         "case_id": "CASE-BENCH-1004",
         "metadata": null
       }
@@ -314,7 +314,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1004",
-        "timestamp": "2026-09-24T08:32:48.970208Z",
+        "timestamp": "2026-09-24T17:47:09.251680Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #4: POS merchant purchase baseline check",
         "actor": "System Orchestrator",
@@ -322,7 +322,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1004",
-        "timestamp": "2026-09-24T08:32:48.970208Z",
+        "timestamp": "2026-09-24T17:47:09.251680Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -330,7 +330,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1004",
-        "timestamp": "2026-09-24T08:32:48.970208Z",
+        "timestamp": "2026-09-24T17:47:09.251680Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-105 (Low Risk Autonomous Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -338,8 +338,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:48.970208Z",
-    "updated_at": "2026-09-24T08:32:48.970208Z"
+    "created_at": "2026-09-24T17:47:09.251680Z",
+    "updated_at": "2026-09-24T17:47:09.251680Z"
   },
   {
     "case_id": "CASE-BENCH-1005",
@@ -360,7 +360,7 @@
         "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
         "relevance": 0.95,
         "confidence": 0.9,
-        "timestamp": "2026-09-24T08:32:48.978979Z",
+        "timestamp": "2026-09-24T17:47:09.483567Z",
         "case_id": "CASE-BENCH-1005",
         "metadata": null
       },
@@ -372,7 +372,7 @@
         "finding": "High transaction velocity: $9,250.00 transfer exceeding 3x cardholder daily threshold.",
         "relevance": 0.85,
         "confidence": 0.88,
-        "timestamp": "2026-09-24T08:32:48.978979Z",
+        "timestamp": "2026-09-24T17:47:09.483567Z",
         "case_id": "CASE-BENCH-1005",
         "metadata": null
       }
@@ -406,7 +406,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1005",
-        "timestamp": "2026-09-24T08:32:48.978959Z",
+        "timestamp": "2026-09-24T17:47:09.483495Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #5: High velocity transfer & device anomaly",
         "actor": "System Orchestrator",
@@ -414,7 +414,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1005",
-        "timestamp": "2026-09-24T08:32:48.978959Z",
+        "timestamp": "2026-09-24T17:47:09.483495Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
         "actor": "Investigation Agent",
@@ -422,7 +422,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1005",
-        "timestamp": "2026-09-24T08:32:48.978959Z",
+        "timestamp": "2026-09-24T17:47:09.483495Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -430,8 +430,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:48.978959Z",
-    "updated_at": "2026-09-24T08:32:48.978959Z"
+    "created_at": "2026-09-24T17:47:09.483495Z",
+    "updated_at": "2026-09-24T17:47:09.483495Z"
   },
   {
     "case_id": "CASE-BENCH-1006",
@@ -452,7 +452,7 @@
         "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
         "relevance": 0.65,
         "confidence": 0.72,
-        "timestamp": "2026-09-24T08:32:48.986220Z",
+        "timestamp": "2026-09-24T17:47:09.602357Z",
         "case_id": "CASE-BENCH-1006",
         "metadata": null
       }
@@ -486,7 +486,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1006",
-        "timestamp": "2026-09-24T08:32:48.986208Z",
+        "timestamp": "2026-09-24T17:47:09.602348Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #6: Location discrepancy behind VPN proxy",
         "actor": "System Orchestrator",
@@ -494,7 +494,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1006",
-        "timestamp": "2026-09-24T08:32:48.986208Z",
+        "timestamp": "2026-09-24T17:47:09.602348Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -502,7 +502,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1006",
-        "timestamp": "2026-09-24T08:32:48.986208Z",
+        "timestamp": "2026-09-24T17:47:09.602348Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-104 (Ambiguous Step-Up Resolution Policy) evaluated.",
         "actor": "Policy Agent",
@@ -510,8 +510,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:48.986208Z",
-    "updated_at": "2026-09-24T08:32:48.986208Z"
+    "created_at": "2026-09-24T17:47:09.602348Z",
+    "updated_at": "2026-09-24T17:47:09.602348Z"
   },
   {
     "case_id": "CASE-BENCH-1007",
@@ -532,7 +532,7 @@
         "finding": "Verified POS purchase ($330.00) matching historical cardholder spending baseline.",
         "relevance": 0.2,
         "confidence": 0.95,
-        "timestamp": "2026-09-24T08:32:48.995400Z",
+        "timestamp": "2026-09-24T17:47:09.738845Z",
         "case_id": "CASE-BENCH-1007",
         "metadata": null
       }
@@ -564,7 +564,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1007",
-        "timestamp": "2026-09-24T08:32:48.995386Z",
+        "timestamp": "2026-09-24T17:47:09.738835Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #7: POS merchant purchase baseline check",
         "actor": "System Orchestrator",
@@ -572,7 +572,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1007",
-        "timestamp": "2026-09-24T08:32:48.995386Z",
+        "timestamp": "2026-09-24T17:47:09.738835Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -580,7 +580,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1007",
-        "timestamp": "2026-09-24T08:32:48.995386Z",
+        "timestamp": "2026-09-24T17:47:09.738835Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-105 (Low Risk Autonomous Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -588,8 +588,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:48.995386Z",
-    "updated_at": "2026-09-24T08:32:48.995386Z"
+    "created_at": "2026-09-24T17:47:09.738835Z",
+    "updated_at": "2026-09-24T17:47:09.738835Z"
   },
   {
     "case_id": "CASE-BENCH-1008",
@@ -610,7 +610,7 @@
         "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
         "relevance": 0.65,
         "confidence": 0.72,
-        "timestamp": "2026-09-24T08:32:49.004190Z",
+        "timestamp": "2026-09-24T17:47:09.844634Z",
         "case_id": "CASE-BENCH-1008",
         "metadata": null
       }
@@ -644,7 +644,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1008",
-        "timestamp": "2026-09-24T08:32:49.004178Z",
+        "timestamp": "2026-09-24T17:47:09.844621Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #8: Location discrepancy behind VPN proxy",
         "actor": "System Orchestrator",
@@ -652,7 +652,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1008",
-        "timestamp": "2026-09-24T08:32:49.004178Z",
+        "timestamp": "2026-09-24T17:47:09.844621Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -660,7 +660,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1008",
-        "timestamp": "2026-09-24T08:32:49.004178Z",
+        "timestamp": "2026-09-24T17:47:09.844621Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -668,8 +668,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.004178Z",
-    "updated_at": "2026-09-24T08:32:49.004178Z"
+    "created_at": "2026-09-24T17:47:09.844621Z",
+    "updated_at": "2026-09-24T17:47:09.844621Z"
   },
   {
     "case_id": "CASE-BENCH-1009",
@@ -690,7 +690,7 @@
         "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
         "relevance": 0.95,
         "confidence": 0.9,
-        "timestamp": "2026-09-24T08:32:49.013262Z",
+        "timestamp": "2026-09-24T17:47:09.961484Z",
         "case_id": "CASE-BENCH-1009",
         "metadata": null
       },
@@ -702,7 +702,7 @@
         "finding": "High transaction velocity: $12,250.00 transfer exceeding 3x cardholder daily threshold.",
         "relevance": 0.85,
         "confidence": 0.88,
-        "timestamp": "2026-09-24T08:32:49.013262Z",
+        "timestamp": "2026-09-24T17:47:09.961484Z",
         "case_id": "CASE-BENCH-1009",
         "metadata": null
       }
@@ -736,7 +736,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1009",
-        "timestamp": "2026-09-24T08:32:49.013241Z",
+        "timestamp": "2026-09-24T17:47:09.961469Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #9: High velocity transfer & device anomaly",
         "actor": "System Orchestrator",
@@ -744,7 +744,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1009",
-        "timestamp": "2026-09-24T08:32:49.013241Z",
+        "timestamp": "2026-09-24T17:47:09.961469Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
         "actor": "Investigation Agent",
@@ -752,7 +752,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1009",
-        "timestamp": "2026-09-24T08:32:49.013241Z",
+        "timestamp": "2026-09-24T17:47:09.961469Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -760,8 +760,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.013241Z",
-    "updated_at": "2026-09-24T08:32:49.013241Z"
+    "created_at": "2026-09-24T17:47:09.961469Z",
+    "updated_at": "2026-09-24T17:47:09.961469Z"
   },
   {
     "case_id": "CASE-BENCH-1010",
@@ -782,7 +782,7 @@
         "finding": "Verified POS purchase ($435.00) matching historical cardholder spending baseline.",
         "relevance": 0.2,
         "confidence": 0.95,
-        "timestamp": "2026-09-24T08:32:49.022384Z",
+        "timestamp": "2026-09-24T17:47:10.076714Z",
         "case_id": "CASE-BENCH-1010",
         "metadata": null
       }
@@ -814,7 +814,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1010",
-        "timestamp": "2026-09-24T08:32:49.022371Z",
+        "timestamp": "2026-09-24T17:47:10.076705Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #10: POS merchant purchase baseline check",
         "actor": "System Orchestrator",
@@ -822,7 +822,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1010",
-        "timestamp": "2026-09-24T08:32:49.022371Z",
+        "timestamp": "2026-09-24T17:47:10.076705Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -830,7 +830,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1010",
-        "timestamp": "2026-09-24T08:32:49.022371Z",
+        "timestamp": "2026-09-24T17:47:10.076705Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-105 (Low Risk Autonomous Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -838,8 +838,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.022371Z",
-    "updated_at": "2026-09-24T08:32:49.022371Z"
+    "created_at": "2026-09-24T17:47:10.076705Z",
+    "updated_at": "2026-09-24T17:47:10.076705Z"
   },
   {
     "case_id": "CASE-BENCH-1011",
@@ -860,7 +860,7 @@
         "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
         "relevance": 0.65,
         "confidence": 0.72,
-        "timestamp": "2026-09-24T08:32:49.031879Z",
+        "timestamp": "2026-09-24T17:47:10.181283Z",
         "case_id": "CASE-BENCH-1011",
         "metadata": null
       }
@@ -894,7 +894,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1011",
-        "timestamp": "2026-09-24T08:32:49.031863Z",
+        "timestamp": "2026-09-24T17:47:10.181266Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #11: Location discrepancy behind VPN proxy",
         "actor": "System Orchestrator",
@@ -902,7 +902,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1011",
-        "timestamp": "2026-09-24T08:32:49.031863Z",
+        "timestamp": "2026-09-24T17:47:10.181266Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -910,7 +910,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1011",
-        "timestamp": "2026-09-24T08:32:49.031863Z",
+        "timestamp": "2026-09-24T17:47:10.181266Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -918,8 +918,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.031863Z",
-    "updated_at": "2026-09-24T08:32:49.031863Z"
+    "created_at": "2026-09-24T17:47:10.181266Z",
+    "updated_at": "2026-09-24T17:47:10.181266Z"
   },
   {
     "case_id": "CASE-BENCH-1012",
@@ -940,7 +940,7 @@
         "finding": "Verified POS purchase ($505.00) matching historical cardholder spending baseline.",
         "relevance": 0.2,
         "confidence": 0.95,
-        "timestamp": "2026-09-24T08:32:49.040723Z",
+        "timestamp": "2026-09-24T17:47:10.402388Z",
         "case_id": "CASE-BENCH-1012",
         "metadata": null
       }
@@ -972,7 +972,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1012",
-        "timestamp": "2026-09-24T08:32:49.040709Z",
+        "timestamp": "2026-09-24T17:47:10.402378Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #12: POS merchant purchase baseline check",
         "actor": "System Orchestrator",
@@ -980,7 +980,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1012",
-        "timestamp": "2026-09-24T08:32:49.040709Z",
+        "timestamp": "2026-09-24T17:47:10.402378Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -988,7 +988,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1012",
-        "timestamp": "2026-09-24T08:32:49.040709Z",
+        "timestamp": "2026-09-24T17:47:10.402378Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -996,8 +996,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.040709Z",
-    "updated_at": "2026-09-24T08:32:49.040709Z"
+    "created_at": "2026-09-24T17:47:10.402378Z",
+    "updated_at": "2026-09-24T17:47:10.402378Z"
   },
   {
     "case_id": "CASE-BENCH-1013",
@@ -1018,7 +1018,7 @@
         "finding": "Verified POS purchase ($540.00) matching historical cardholder spending baseline.",
         "relevance": 0.2,
         "confidence": 0.95,
-        "timestamp": "2026-09-24T08:32:49.050400Z",
+        "timestamp": "2026-09-24T17:47:10.511922Z",
         "case_id": "CASE-BENCH-1013",
         "metadata": null
       }
@@ -1050,7 +1050,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1013",
-        "timestamp": "2026-09-24T08:32:49.050383Z",
+        "timestamp": "2026-09-24T17:47:10.511911Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #13: POS merchant purchase baseline check",
         "actor": "System Orchestrator",
@@ -1058,7 +1058,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1013",
-        "timestamp": "2026-09-24T08:32:49.050383Z",
+        "timestamp": "2026-09-24T17:47:10.511911Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -1066,7 +1066,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1013",
-        "timestamp": "2026-09-24T08:32:49.050383Z",
+        "timestamp": "2026-09-24T17:47:10.511911Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -1074,8 +1074,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.050383Z",
-    "updated_at": "2026-09-24T08:32:49.050383Z"
+    "created_at": "2026-09-24T17:47:10.511911Z",
+    "updated_at": "2026-09-24T17:47:10.511911Z"
   },
   {
     "case_id": "CASE-BENCH-1014",
@@ -1096,7 +1096,7 @@
         "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
         "relevance": 0.95,
         "confidence": 0.9,
-        "timestamp": "2026-09-24T08:32:49.058195Z",
+        "timestamp": "2026-09-24T17:47:10.627819Z",
         "case_id": "CASE-BENCH-1014",
         "metadata": null
       },
@@ -1108,7 +1108,7 @@
         "finding": "High transaction velocity: $16,000.00 transfer exceeding 3x cardholder daily threshold.",
         "relevance": 0.85,
         "confidence": 0.88,
-        "timestamp": "2026-09-24T08:32:49.058195Z",
+        "timestamp": "2026-09-24T17:47:10.627819Z",
         "case_id": "CASE-BENCH-1014",
         "metadata": null
       }
@@ -1142,7 +1142,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1014",
-        "timestamp": "2026-09-24T08:32:49.058180Z",
+        "timestamp": "2026-09-24T17:47:10.627797Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #14: High velocity transfer & device anomaly",
         "actor": "System Orchestrator",
@@ -1150,7 +1150,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1014",
-        "timestamp": "2026-09-24T08:32:49.058180Z",
+        "timestamp": "2026-09-24T17:47:10.627797Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
         "actor": "Investigation Agent",
@@ -1158,7 +1158,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1014",
-        "timestamp": "2026-09-24T08:32:49.058180Z",
+        "timestamp": "2026-09-24T17:47:10.627797Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -1166,8 +1166,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.058180Z",
-    "updated_at": "2026-09-24T08:32:49.058180Z"
+    "created_at": "2026-09-24T17:47:10.627797Z",
+    "updated_at": "2026-09-24T17:47:10.627797Z"
   },
   {
     "case_id": "CASE-BENCH-1015",
@@ -1188,7 +1188,7 @@
         "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
         "relevance": 0.65,
         "confidence": 0.72,
-        "timestamp": "2026-09-24T08:32:49.066769Z",
+        "timestamp": "2026-09-24T17:47:10.733383Z",
         "case_id": "CASE-BENCH-1015",
         "metadata": null
       }
@@ -1222,7 +1222,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1015",
-        "timestamp": "2026-09-24T08:32:49.066747Z",
+        "timestamp": "2026-09-24T17:47:10.733372Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #15: Location discrepancy behind VPN proxy",
         "actor": "System Orchestrator",
@@ -1230,7 +1230,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1015",
-        "timestamp": "2026-09-24T08:32:49.066747Z",
+        "timestamp": "2026-09-24T17:47:10.733372Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -1238,7 +1238,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1015",
-        "timestamp": "2026-09-24T08:32:49.066747Z",
+        "timestamp": "2026-09-24T17:47:10.733372Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -1246,8 +1246,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.066747Z",
-    "updated_at": "2026-09-24T08:32:49.066747Z"
+    "created_at": "2026-09-24T17:47:10.733372Z",
+    "updated_at": "2026-09-24T17:47:10.733372Z"
   },
   {
     "case_id": "CASE-BENCH-1016",
@@ -1268,7 +1268,7 @@
         "finding": "Verified POS purchase ($645.00) matching historical cardholder spending baseline.",
         "relevance": 0.2,
         "confidence": 0.95,
-        "timestamp": "2026-09-24T08:32:49.076194Z",
+        "timestamp": "2026-09-24T17:47:10.866062Z",
         "case_id": "CASE-BENCH-1016",
         "metadata": null
       }
@@ -1300,7 +1300,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1016",
-        "timestamp": "2026-09-24T08:32:49.076180Z",
+        "timestamp": "2026-09-24T17:47:10.866046Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #16: POS merchant purchase baseline check",
         "actor": "System Orchestrator",
@@ -1308,7 +1308,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1016",
-        "timestamp": "2026-09-24T08:32:49.076180Z",
+        "timestamp": "2026-09-24T17:47:10.866046Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -1316,7 +1316,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1016",
-        "timestamp": "2026-09-24T08:32:49.076180Z",
+        "timestamp": "2026-09-24T17:47:10.866046Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -1324,8 +1324,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.076180Z",
-    "updated_at": "2026-09-24T08:32:49.076180Z"
+    "created_at": "2026-09-24T17:47:10.866046Z",
+    "updated_at": "2026-09-24T17:47:10.866046Z"
   },
   {
     "case_id": "CASE-BENCH-1017",
@@ -1346,7 +1346,7 @@
         "finding": "Verified POS purchase ($680.00) matching historical cardholder spending baseline.",
         "relevance": 0.2,
         "confidence": 0.95,
-        "timestamp": "2026-09-24T08:32:49.085757Z",
+        "timestamp": "2026-09-24T17:47:10.973405Z",
         "case_id": "CASE-BENCH-1017",
         "metadata": null
       }
@@ -1378,7 +1378,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1017",
-        "timestamp": "2026-09-24T08:32:49.085743Z",
+        "timestamp": "2026-09-24T17:47:10.973390Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #17: POS merchant purchase baseline check",
         "actor": "System Orchestrator",
@@ -1386,7 +1386,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1017",
-        "timestamp": "2026-09-24T08:32:49.085743Z",
+        "timestamp": "2026-09-24T17:47:10.973390Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -1394,7 +1394,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1017",
-        "timestamp": "2026-09-24T08:32:49.085743Z",
+        "timestamp": "2026-09-24T17:47:10.973390Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -1402,8 +1402,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.085743Z",
-    "updated_at": "2026-09-24T08:32:49.085743Z"
+    "created_at": "2026-09-24T17:47:10.973390Z",
+    "updated_at": "2026-09-24T17:47:10.973390Z"
   },
   {
     "case_id": "CASE-BENCH-1018",
@@ -1424,7 +1424,7 @@
         "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
         "relevance": 0.95,
         "confidence": 0.9,
-        "timestamp": "2026-09-24T08:32:49.095527Z",
+        "timestamp": "2026-09-24T17:47:11.078957Z",
         "case_id": "CASE-BENCH-1018",
         "metadata": null
       },
@@ -1436,7 +1436,7 @@
         "finding": "High transaction velocity: $19,000.00 transfer exceeding 3x cardholder daily threshold.",
         "relevance": 0.85,
         "confidence": 0.88,
-        "timestamp": "2026-09-24T08:32:49.095527Z",
+        "timestamp": "2026-09-24T17:47:11.078957Z",
         "case_id": "CASE-BENCH-1018",
         "metadata": null
       }
@@ -1470,7 +1470,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1018",
-        "timestamp": "2026-09-24T08:32:49.095505Z",
+        "timestamp": "2026-09-24T17:47:11.078939Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #18: High velocity transfer & device anomaly",
         "actor": "System Orchestrator",
@@ -1478,7 +1478,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1018",
-        "timestamp": "2026-09-24T08:32:49.095505Z",
+        "timestamp": "2026-09-24T17:47:11.078939Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
         "actor": "Investigation Agent",
@@ -1486,7 +1486,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1018",
-        "timestamp": "2026-09-24T08:32:49.095505Z",
+        "timestamp": "2026-09-24T17:47:11.078939Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -1494,8 +1494,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.095505Z",
-    "updated_at": "2026-09-24T08:32:49.095505Z"
+    "created_at": "2026-09-24T17:47:11.078939Z",
+    "updated_at": "2026-09-24T17:47:11.078939Z"
   },
   {
     "case_id": "CASE-BENCH-1019",
@@ -1516,7 +1516,7 @@
         "finding": "Transaction routed via commercial VPN proxy IP with localized location discrepancy.",
         "relevance": 0.65,
         "confidence": 0.72,
-        "timestamp": "2026-09-24T08:32:49.106634Z",
+        "timestamp": "2026-09-24T17:47:11.183778Z",
         "case_id": "CASE-BENCH-1019",
         "metadata": null
       }
@@ -1550,7 +1550,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1019",
-        "timestamp": "2026-09-24T08:32:49.106617Z",
+        "timestamp": "2026-09-24T17:47:11.183762Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #19: Location discrepancy behind VPN proxy",
         "actor": "System Orchestrator",
@@ -1558,7 +1558,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1019",
-        "timestamp": "2026-09-24T08:32:49.106617Z",
+        "timestamp": "2026-09-24T17:47:11.183762Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 0 connected device entities.",
         "actor": "Investigation Agent",
@@ -1566,7 +1566,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1019",
-        "timestamp": "2026-09-24T08:32:49.106617Z",
+        "timestamp": "2026-09-24T17:47:11.183762Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-102 (Shared Device Ring Protocol) evaluated.",
         "actor": "Policy Agent",
@@ -1574,8 +1574,8 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.106617Z",
-    "updated_at": "2026-09-24T08:32:49.106617Z"
+    "created_at": "2026-09-24T17:47:11.183762Z",
+    "updated_at": "2026-09-24T17:47:11.183762Z"
   },
   {
     "case_id": "CASE-BENCH-1020",
@@ -1596,7 +1596,7 @@
         "finding": "Device DVC-9082 is shared across 2 distinct customer accounts with historical fraud flags.",
         "relevance": 0.95,
         "confidence": 0.9,
-        "timestamp": "2026-09-24T08:32:49.117436Z",
+        "timestamp": "2026-09-24T17:47:11.298881Z",
         "case_id": "CASE-BENCH-1020",
         "metadata": null
       },
@@ -1608,7 +1608,7 @@
         "finding": "High transaction velocity: $20,500.00 transfer exceeding 3x cardholder daily threshold.",
         "relevance": 0.85,
         "confidence": 0.88,
-        "timestamp": "2026-09-24T08:32:49.117436Z",
+        "timestamp": "2026-09-24T17:47:11.298881Z",
         "case_id": "CASE-BENCH-1020",
         "metadata": null
       }
@@ -1642,7 +1642,7 @@
     "timeline": [
       {
         "event_id": "EVT-01-CASE-BENCH-1020",
-        "timestamp": "2026-09-24T08:32:49.117410Z",
+        "timestamp": "2026-09-24T17:47:11.298861Z",
         "event_type": "CASE_CREATED",
         "summary": "Investigation triggered: Benchmark Scenario #20: High velocity transfer & device anomaly",
         "actor": "System Orchestrator",
@@ -1650,7 +1650,7 @@
       },
       {
         "event_id": "EVT-02-CASE-BENCH-1020",
-        "timestamp": "2026-09-24T08:32:49.117410Z",
+        "timestamp": "2026-09-24T17:47:11.298861Z",
         "event_type": "GRAPH_QUERY_EXECUTED",
         "summary": "TigerGraph 2-hop traversal complete. Discovered 1 connected device entities.",
         "actor": "Investigation Agent",
@@ -1658,7 +1658,7 @@
       },
       {
         "event_id": "EVT-03-CASE-BENCH-1020",
-        "timestamp": "2026-09-24T08:32:49.117410Z",
+        "timestamp": "2026-09-24T17:47:11.298861Z",
         "event_type": "POLICY_EVALUATED",
         "summary": "Policy POL-101 (High Value Wire Transfer Clearance) evaluated.",
         "actor": "Policy Agent",
@@ -1666,7 +1666,7 @@
       }
     ],
     "final_outcome": null,
-    "created_at": "2026-09-24T08:32:49.117410Z",
-    "updated_at": "2026-09-24T08:32:49.117410Z"
+    "created_at": "2026-09-24T17:47:11.298861Z",
+    "updated_at": "2026-09-24T17:47:11.298861Z"
   }
 ]

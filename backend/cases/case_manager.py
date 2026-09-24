@@ -1,122 +1,90 @@
-import sqlite3
+import os
 import json
 import logging
 from typing import List, Optional
 from datetime import datetime
+from dotenv import load_dotenv
+load_dotenv()
+from supabase import create_client, Client
 from backend.models.schemas import FraudCase, EvidenceItem, ActionPlan, TimelineEvent
 
 logger = logging.getLogger(__name__)
 
-DB_PATH = "fraud_platform.db"
-
 class CaseManager:
-    def __init__(self, db_path: str = DB_PATH):
-        self.db_path = db_path
-        self._init_db()
-
-    def _init_db(self):
-        with sqlite3.connect(self.db_path) as conn:
-            cursor = conn.cursor()
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS cases (
-                    case_id TEXT PRIMARY KEY,
-                    trigger TEXT,
-                    customer_id TEXT,
-                    account_id TEXT,
-                    transaction_id TEXT,
-                    status TEXT,
-                    risk_level TEXT,
-                    confidence REAL,
-                    fraud_pattern TEXT,
-                    evidence TEXT,
-                    findings TEXT,
-                    uncertainty TEXT,
-                    requested_evidence TEXT,
-                    actions TEXT,
-                    approval_status TEXT,
-                    analyst_notes TEXT,
-                    timeline TEXT,
-                    final_outcome TEXT,
-                    created_at TEXT,
-                    updated_at TEXT
-                )
-            """)
-            conn.commit()
+    def __init__(self):
+        supabase_url = os.environ.get("SUPABASE_URL")
+        supabase_key = os.environ.get("SUPABASE_KEY")
+        if not supabase_url or not supabase_key:
+            logger.warning("SUPABASE_URL and SUPABASE_KEY not set. Case Manager will fail.")
+        else:
+            self.supabase: Client = create_client(supabase_url, supabase_key)
 
     def save_case(self, case: FraudCase):
-        with sqlite3.connect(self.db_path) as conn:
-            cursor = conn.cursor()
-            cursor.execute("""
-                INSERT INTO cases (
-                    case_id, trigger, customer_id, account_id, transaction_id, status,
-                    risk_level, confidence, fraud_pattern, evidence, findings, uncertainty,
-                    requested_evidence, actions, approval_status, analyst_notes, timeline,
-                    final_outcome, created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(case_id) DO UPDATE SET
-                    status=excluded.status,
-                    risk_level=excluded.risk_level,
-                    confidence=excluded.confidence,
-                    fraud_pattern=excluded.fraud_pattern,
-                    evidence=excluded.evidence,
-                    findings=excluded.findings,
-                    uncertainty=excluded.uncertainty,
-                    requested_evidence=excluded.requested_evidence,
-                    actions=excluded.actions,
-                    approval_status=excluded.approval_status,
-                    analyst_notes=excluded.analyst_notes,
-                    timeline=excluded.timeline,
-                    final_outcome=excluded.final_outcome,
-                    updated_at=excluded.updated_at
-            """, (
-                case.case_id, case.trigger, case.customer_id, case.account_id, case.transaction_id, case.status,
-                case.risk_level, case.confidence, case.fraud_pattern,
-                json.dumps([e.dict() for e in case.evidence]),
-                json.dumps(case.findings), case.uncertainty,
-                json.dumps(case.requested_evidence),
-                json.dumps([a.dict() for a in case.actions]),
-                case.approval_status, case.analyst_notes,
-                json.dumps([t.dict() for t in case.timeline]),
-                case.final_outcome, case.created_at, case.updated_at
-            ))
-            conn.commit()
+        data = {
+            "case_id": case.case_id,
+            "trigger": case.trigger,
+            "customer_id": case.customer_id,
+            "account_id": case.account_id,
+            "transaction_id": case.transaction_id,
+            "status": case.status,
+            "risk_level": case.risk_level,
+            "confidence": case.confidence,
+            "fraud_pattern": case.fraud_pattern,
+            "evidence": [e.dict() for e in case.evidence],
+            "findings": case.findings,
+            "uncertainty": case.uncertainty,
+            "requested_evidence": case.requested_evidence,
+            "actions": [a.dict() for a in case.actions],
+            "approval_status": case.approval_status,
+            "analyst_notes": case.analyst_notes,
+            "timeline": [t.dict() for t in case.timeline],
+            "final_outcome": case.final_outcome,
+            "created_at": case.created_at,
+            "updated_at": case.updated_at
+        }
+        try:
+            self.supabase.table("cases").upsert(data).execute()
+        except Exception as e:
+            logger.error(f"Error saving case to Supabase: {e}")
 
     def get_case(self, case_id: str) -> Optional[FraudCase]:
-        with sqlite3.connect(self.db_path) as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT * FROM cases WHERE case_id = ?", (case_id,))
-            row = cursor.fetchone()
-            if not row:
+        try:
+            res = self.supabase.table("cases").select("*").eq("case_id", case_id).execute()
+            if not res.data:
                 return None
-            return self._row_to_case(row)
+            return self._row_to_case(res.data[0])
+        except Exception as e:
+            logger.error(f"Error getting case from Supabase: {e}")
+            return None
 
     def list_cases(self) -> List[FraudCase]:
-        with sqlite3.connect(self.db_path) as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT * FROM cases ORDER BY created_at DESC")
-            rows = cursor.fetchall()
-            return [self._row_to_case(r) for r in rows]
+        try:
+            res = self.supabase.table("cases").select("*").order("created_at", desc=True).execute()
+            return [self._row_to_case(row) for row in res.data]
+        except Exception as e:
+            logger.error(f"Error listing cases from Supabase: {e}")
+            return []
 
-    def _row_to_case(self, row) -> FraudCase:
+    def _row_to_case(self, row: dict) -> FraudCase:
         return FraudCase(
-            case_id=row[0],
-            trigger=row[1],
-            customer_id=row[2],
-            account_id=row[3],
-            transaction_id=row[4],
-            status=row[5],
-            risk_level=row[6],
-            confidence=row[7],
-            fraud_pattern=row[8],
-            evidence=[EvidenceItem(**e) for e in json.loads(row[9] or "[]")],
-            findings=json.loads(row[10] or "[]"),
-            uncertainty=row[11] or "",
-            requested_evidence=json.loads(row[12] or "[]"),
-            actions=[ActionPlan(**a) for a in json.loads(row[13] or "[]")],
-            approval_status=row[14] or "NOT_REQUIRED",
-            analyst_notes=row[15],
-            timeline=[TimelineEvent(**t) for t in json.loads(row[16] or "[]")],
-            final_outcome=row[17],
-            created_at=row[18],
-            updated_at=row[19]
+            case_id=row.get("case_id"),
+            trigger=row.get("trigger"),
+            customer_id=row.get("customer_id"),
+            account_id=row.get("account_id"),
+            transaction_id=row.get("transaction_id"),
+            status=row.get("status"),
+            risk_level=row.get("risk_level"),
+            confidence=row.get("confidence"),
+            fraud_pattern=row.get("fraud_pattern"),
+            evidence=[EvidenceItem(**e) for e in (row.get("evidence") or [])],
+            findings=row.get("findings") or [],
+            uncertainty=row.get("uncertainty") or "",
+            requested_evidence=row.get("requested_evidence") or [],
+            actions=[ActionPlan(**a) for a in (row.get("actions") or [])],
+            approval_status=row.get("approval_status") or "NOT_REQUIRED",
+            analyst_notes=row.get("analyst_notes"),
+            timeline=[TimelineEvent(**t) for t in (row.get("timeline") or [])],
+            final_outcome=row.get("final_outcome"),
+            created_at=row.get("created_at"),
+            updated_at=row.get("updated_at")
         )
